@@ -1,0 +1,19 @@
+{% extends 'main_chat/layout.html' %}
+
+{%block title%}Главная страница{% endblock %}
+
+{%block content%}
+  <h1>Главная страница</h1>
+  <div class="features">
+
+    {%for i in message%}
+      <div class="messages">
+          <p class="name">Пользователь: {{ i.name}}</p>
+          <p>Сообщение:
+            <p>{{ i.message }}</p>
+
+      </div>
+
+    {%endfor%}
+
+{% endblock %}
